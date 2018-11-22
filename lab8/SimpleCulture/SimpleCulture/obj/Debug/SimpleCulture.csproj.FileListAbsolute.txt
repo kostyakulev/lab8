@@ -1,0 +1,16 @@
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\bin\Debug\SimpleCulture.exe.config
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\bin\Debug\SimpleCulture.exe
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\bin\Debug\SimpleCulture.pdb
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.csprojAssemblyReference.cache
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.Form1.resources
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.Properties.Resources.resources
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.csproj.GenerateResource.cache
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.csproj.CoreCompileInputs.cache
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.exe
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.pdb
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\bin\Debug\en\SimpleCulture.resources.dll
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\bin\Debug\ru\SimpleCulture.resources.dll
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.Form1.en.resources
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\SimpleCulture.Form1.ru.resources
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\en\SimpleCulture.resources.dll
+C:\Users\ensody\Desktop\sync\proj\Lab_8\SimpleCulture\SimpleCulture\obj\Debug\ru\SimpleCulture.resources.dll

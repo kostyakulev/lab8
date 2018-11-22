@@ -1,0 +1,35 @@
+Microsoft HTML Help Compiler 4.74.8702
+
+Compiling C:\Users\ensody\Desktop\sync\proj\Lab_8\HELP\notepadhelp.chm
+
+HHC5003: Error: Compilation failed while compiling HelpPages\Paste.htm.
+HHC5003: Error: Compilation failed while compiling HelpPages\Save.htm.
+HHC5003: Error: Compilation failed while compiling HelpPages\SaveAs.htm.
+HHC5003: Error: Compilation failed while compiling HelpPages\SelectAll.htm.
+HHC5003: Error: Compilation failed while compiling HelpPages\structure.htm.
+HHC5003: Error: Compilation failed while compiling HelpPages\TileHorizontal.htm.
+HHC5003: Error: Compilation failed while compiling HelpPages\TileVertical.htm.
+
+
+The following files were not compiled:
+HelpPages\Paste.htm
+HelpPages\Save.htm
+HelpPages\SaveAs.htm
+HelpPages\SelectAll.htm
+HelpPages\structure.htm
+HelpPages\TileHorizontal.htm
+HelpPages\TileVertical.htm
+Microsoft HTML Help Compiler 4.74.8702
+
+Compiling C:\Users\ensody\Desktop\sync\proj\Lab_8\HELP\notepadhelp.chm
+
+
+Compile time: 0 minutes, 2 seconds
+38	Topics
+184	Local links
+0	Internet links
+1	Graphic
+
+
+Created C:\Users\ensody\Desktop\sync\proj\Lab_8\HELP\notepadhelp.chm, 77,292 bytes
+Compression decreased file by 1,321,409 bytes.

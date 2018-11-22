@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Îáðàáîò÷èê ïóíêòà ìåíþ Font</title>
+</head>
+
+<body bgcolor="#66CCFF">
+
+<p><span lang="ru"><font size="2">&#1054;&#1073;&#1088;&#1072;&#1073;&#1086;&#1090;&#1095;&#1080;&#1082; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072; &#1084;&#1077;&#1085;&#1102;
+</font> </span>
+<font size="2">Font<span lang="ru">, &#1092;&#1086;&#1088;&#1084;&#1072;<font COLOR="#0000ff"> </font> </span>
+</font><font size="2" COLOR="#0000ff"><a href="frmmain.htm">frmmain</a>:</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">private</font></font><font size="2"> <font COLOR="#0000ff">void</font> mnuFont_Click(<font COLOR="#0000ff">object</font> 
+sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1055;&#1077;&#1088;&#1077;&#1082;&#1083;&#1102;&#1095;&#1072;&#1077;&#1084; &#1092;&#1086;&#1082;&#1091;&#1089; &#1085;&#1072; &#1076;&#1072;&#1085;&#1085;&#1091;&#1102; &#1092;&#1086;&#1088;&#1084;&#1091;.</p>
+</font>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font COLOR="#008000" size="2">//&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;, &#1095;&#1090;&#1086; &#1088;&#1086;&#1076;&#1080;&#1090;&#1077;&#1083;&#1100;&#1089;&#1082;&#1086;&#1081; &#1092;&#1086;&#1088;&#1084;&#1086;&#1081; &#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1092;&#1086;&#1088;&#1084;&#1072; 
+frmmain </p>
+</font>
+<p><font size="2">frm.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font COLOR="#008000" size="2">//&#1042;&#1099;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1076;&#1080;&#1072;&#1083;&#1086;&#1075;</p>
+</font>
+<p><font size="2">fontDialog1.ShowColor = <font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1074;&#1103;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072; SelectionFont &#1080; SelectionColor 
+&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072; RichTextBox </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1089; &#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1091;&#1102;&#1097;&#1080;&#1084;&#1080; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080; &#1076;&#1080;&#1072;&#1083;&#1086;&#1075;&#1072;</p>
+</font>
+<p><font size="2">fontDialog1.Font = frm.richTextBox1.SelectionFont;</font></p>
+<p><font size="2">fontDialog1.Color = frm.richTextBox1.SelectionColor; </font> </p>
+<p><font COLOR="#008000" size="2">//&#1045;&#1089;&#1083;&#1080; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085; &#1076;&#1080;&#1072;&#1083;&#1086;&#1075; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1092;&#1072;&#1081;&#1083;&#1072;, &#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1103;&#1077;&#1084; &#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1077;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (fontDialog1.ShowDialog() == DialogResult.OK)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">frm.richTextBox1.SelectionFont = fontDialog1.Font;</font></p>
+<p><font size="2">frm.richTextBox1.SelectionColor = fontDialog1.Color; </font> </p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1055;&#1086;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1092;&#1086;&#1088;&#1084;&#1091;</p>
+</font>
+<p><font size="2">frm.Show();</font></p>
+<p><font size="2">}</font></p>
+
+</body>
+
+</html>

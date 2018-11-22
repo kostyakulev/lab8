@@ -1,0 +1,54 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=notepadhelp.chm
+Contents file=ContentsNhelp.hhc
+Default Window=Поиск
+Display compile progress=No
+Full-text search=Yes
+Index file=notepadhelp.hhk
+Language=0x419 Русский
+
+[WINDOWS]
+Поиск="Справка Notepad C#","ContentsNhelp.hhc","notepadhelp.hhk",,,,,,,0x3520,,0x3006,,,,,,,,0
+
+
+[FILES]
+HelpPages\AboutForm.htm
+HelpPages\AboutProgram.htm
+HelpPages\ArrangeIcons.htm
+HelpPages\blank.htm
+HelpPages\blankCopy.htm
+HelpPages\blankCut.htm
+HelpPages\blankDelete.htm
+HelpPages\blankOpen.htm
+HelpPages\blankPaste.htm
+HelpPages\blankSave.htm
+HelpPages\blankSelectAll.htm
+HelpPages\Cascade.htm
+HelpPages\Color.htm
+HelpPages\Copy.htm
+HelpPages\Cut.htm
+HelpPages\Delete.htm
+HelpPages\Exit.htm
+HelpPages\Find.htm
+HelpPages\FindForm.htm
+HelpPages\Font.htm
+HelpPages\frmmain.htm
+HelpPages\FullCodeAbout.htm
+HelpPages\FullCodeblank.htm
+HelpPages\FullCodeFindForm.htm
+HelpPages\FullCodefrmmain.htm
+HelpPages\index.htm
+HelpPages\New.htm
+HelpPages\Notepadhelp.htm
+HelpPages\Open.htm
+HelpPages\Paste.htm
+HelpPages\Save.htm
+HelpPages\SaveAs.htm
+HelpPages\SelectAll.htm
+HelpPages\structure.htm
+HelpPages\TileHorizontal.htm
+HelpPages\TileVertical.htm
+
+[INFOTYPES]
+

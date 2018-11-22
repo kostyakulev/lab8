@@ -1,0 +1,7 @@
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\bin\Debug\FormatOutput.exe.config
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\bin\Debug\FormatOutput.exe
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\bin\Debug\FormatOutput.pdb
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\obj\Debug\FormatOutput.csprojAssemblyReference.cache
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\obj\Debug\FormatOutput.csproj.CoreCompileInputs.cache
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\obj\Debug\FormatOutput.exe
+C:\Users\ensody\Desktop\sync\proj\Lab_8\FormatOutput\FormatOutput\obj\Debug\FormatOutput.pdb

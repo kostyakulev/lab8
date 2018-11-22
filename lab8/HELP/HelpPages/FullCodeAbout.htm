@@ -1,0 +1,259 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ïîëíûé ëèñòèíã ôîðìû About</title>
+</head>
+
+<body bgcolor="#66CCFF">
+
+<p><font size="2">&#1055;&#1086;&#1083;&#1085;&#1099;&#1081; &#1083;&#1080;&#1089;&#1090;&#1080;&#1085;&#1075; &#1092;&#1086;&#1088;&#1084;&#1099; About</font><span lang="en-us"><font size="2">:</font></span></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Drawing;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Collections;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.ComponentModel;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Windows.Forms;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">namespace</font></font><font size="2"> NotepadCSharp</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Summary description 
+for About.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">class</font> About 
+: System.Windows.Forms.Form</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.PictureBox 
+pictureBox1;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.Label label1;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.LinkLabel 
+linkLabel1;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.Button button1;</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required designer 
+variable.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.ComponentModel.Container 
+components = <font COLOR="#0000ff">null</font>;</font></p>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> About()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font COLOR="#008000" size="2">// Required for Windows Form Designer support</p>
+</font>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font size="2">InitializeComponent();</font></p>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font COLOR="#008000" size="2">// TODO: Add any constructor code after 
+InitializeComponent call</p>
+</font>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Clean up any resources 
+being used.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">protected</font><font size="2"> <font COLOR="#0000ff">override</font>
+<font COLOR="#0000ff">void</font> Dispose( <font COLOR="#0000ff">bool</font> 
+disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2">( disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">if</font></font><font size="2">(components != <font COLOR="#0000ff">null</font>)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">components.Dispose();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff"><font size="2">base</font></font><font size="2">.Dispose( disposing );</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">#region</font></font><font size="2"> Windows Form Designer generated code</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required method for 
+Designer support - do not modify</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> the contents of this 
+method with the code editor.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+InitializeComponent()</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">System.Resources.ResourceManager resources = <font COLOR="#0000ff">new</font> 
+System.Resources.ResourceManager(<font COLOR="#0000ff">typeof</font>(About));</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.PictureBox();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.label1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.Label();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.LinkLabel();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.button1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.Button();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.SuspendLayout();</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// pictureBox1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject(&quot;pictureBox1.Image&quot;)));</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1.Location =
+<font COLOR="#0000ff">new</font> System.Drawing.Point(0, 0);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1.Name = &quot;pictureBox1&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1.Size = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(312, 104);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1.TabIndex = 0;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.pictureBox1.TabStop = <font COLOR="#0000ff">
+false</font>;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// label1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.label1.Location = <font COLOR="#0000ff">new</font> 
+System.Drawing.Point(8, 112);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.label1.Name = &quot;label1&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.label1.Size = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(104, 32);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.label1.TabIndex = 1;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.label1.Text = &quot;Notepad C# 2006 All rights 
+reserved&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// linkLabel1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.Location = <font COLOR="#0000ff">
+new</font> System.Drawing.Point(144, 120);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.Name = &quot;linkLabel1&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.Size = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(152, 23);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.TabIndex = 2;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.TabStop = <font COLOR="#0000ff">
+true</font>;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.Text = &quot;www.notepadcsharp.com&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.linkLabel1.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.linkLabel1_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// button1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.button1.Location = <font COLOR="#0000ff">
+new</font> System.Drawing.Point(120, 152);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.button1.Name = &quot;button1&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.button1.TabIndex = 3;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.button1.Text = &quot;&amp;OK&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.button1.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.button1_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// About</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.AutoScaleBaseSize = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(5, 13);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.ClientSize = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(312, 182);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.button1);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.linkLabel1);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.label1);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.pictureBox1);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.FormBorderStyle = 
+System.Windows.Forms.FormBorderStyle.FixedSingle;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.MaximizeBox = <font COLOR="#0000ff">false</font>;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.MinimizeBox = <font COLOR="#0000ff">false</font>;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Name = &quot;About&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Text = &quot;About Notepad C#&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.ResumeLayout(<font COLOR="#0000ff">false</font>);</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff" size="2">
+<p>#endregion</p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+button1_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Close();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+linkLabel1_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1103;&#1077;&#1084; &#1073;&#1083;&#1086;&#1082; &#1076;&#1083;&#1103; &#1086;&#1073;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1080; &#1080;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1081; - &#1087;&#1086; &#1088;&#1072;&#1079;&#1085;&#1099;&#1084; 
+&#1087;&#1088;&#1080;&#1095;&#1080;&#1085;&#1072;&#1084; </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100; &#1084;&#1086;&#1078;&#1077;&#1090; &#1085;&#1077; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072; &#1082; &#1088;&#1077;&#1089;&#1091;&#1088;&#1089;&#1091;.</p>
+</font>
+<p><font COLOR="#0000ff" size="2">try</p>
+</font>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1042;&#1099;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1084;&#1077;&#1090;&#1086;&#1076; VisitLink, &#1086;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1085;&#1099;&#1081; &#1085;&#1080;&#1078;&#1077;</p>
+</font>
+<p><font size="2">VisitLink();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">catch</font><font size="2"> (Exception ex )</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">MessageBox.Show(ex +&quot;Unable to open link that was clicked.&quot;);</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1084;&#1077;&#1090;&#1086;&#1076; VisitLink</p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+VisitLink()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">// &#1048;&#1079;&#1084;&#1077;&#1085;&#1103;&#1077;&#1084; &#1094;&#1074;&#1077;&#1090; &#1087;&#1086;&#1089;&#1077;&#1097;&#1077;&#1085;&#1085;&#1086;&#1081; &#1089;&#1089;&#1099;&#1083;&#1082;&#1080;, &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1085;&#1086; </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1086;&#1073;&#1088;&#1072;&#1097;&#1072;&#1103;&#1089;&#1100; &#1082; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1091; LinkVisited &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072; LinkLabel
+</p>
+</font>
+<p><font size="2">linkLabel1.LinkVisited = <font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#008000" size="2">//&#1042;&#1099;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1084;&#1077;&#1090;&#1086;&#1076; Process.Start method &#1076;&#1083;&#1103; &#1079;&#1072;&#1087;&#1091;&#1089;&#1082;&#1072; 
+&#1073;&#1088;&#1072;&#1091;&#1079;&#1077;&#1088;&#1072;, </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1091;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1085;&#1086;&#1075;&#1086; &#1087;&#1086; &#1091;&#1084;&#1086;&#1083;&#1095;&#1072;&#1085;&#1080;&#1102; &#1080; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1089;&#1089;&#1099;&#1083;&#1082;&#1080;</p>
+</font>
+<p><font size="2">System.Diagnostics.Process.Start(&quot;http://www.notepadcsharp.com&quot;);</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ïîëíûé ëèñòèíã ôîðìû blank</title>
+</head>
+
+<body bgcolor="#66CCFF">
+
+<p><font size="2">&#1055;&#1086;&#1083;&#1085;&#1099;&#1081; &#1083;&#1080;&#1089;&#1090;&#1080;&#1085;&#1075; &#1092;&#1086;&#1088;&#1084;&#1099; b</font><span lang="en-us"><font size="2">lank:</font></span></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Drawing;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Collections;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.ComponentModel;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Windows.Forms;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.IO;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">namespace</font></font><font size="2"> NotepadCSharp</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Summary description 
+for blank.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">class</font> blank 
+: System.Windows.Forms.Form</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> System.Windows.Forms.RichTextBox 
+richTextBox1;</font></p>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">string</font> 
+DocName = &quot;&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">string</font> 
+BufferText = &quot;&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.ContextMenu 
+contextMenu1;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.MenuItem cmnuCut;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.MenuItem cmnuCopy;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.MenuItem cmnuPaste;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.MenuItem cmnuDelete;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.MenuItem menuItem6;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.MenuItem 
+cmnuSelectAll;</font></p>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">bool</font> IsSaved 
+= <font COLOR="#0000ff">false</font>;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.StatusBar 
+statusBar1;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.StatusBarPanel 
+sbAmount;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.StatusBarPanel 
+sbTime;</font></p>
+<p></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required designer 
+variable.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.ComponentModel.Container 
+components = <font COLOR="#0000ff">null</font>;</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> blank()</font></p>
+<p><font size="2">{</font></p>
+<p></p>
+<p><font size="2">InitializeComponent();</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1091; Text &#1087;&#1072;&#1085;&#1077;&#1083;&#1080; sbTime &#1091;&#1089;&#1090;&#1072;&#1085;&#1072;&#1074;&#1083;&#1080;&#1074;&#1072;&#1077;&#1084; &#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1085;&#1086;&#1077; 
+&#1074;&#1088;&#1077;&#1084;&#1103;, </p>
+</font>
+<p><font COLOR="#008000" size="2">// &#1082;&#1086;&#1085;&#1074;&#1077;&#1088;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1074; &#1077;&#1075;&#1086; &#1074; &#1090;&#1080;&#1087; String</p>
+</font>
+<p><font size="2">sbTime.Text = Convert.ToString(System.DateTime.Now.ToLongTimeString());</font></p>
+<p><font COLOR="#008000" size="2">//&#1042; &#1090;&#1077;&#1082;&#1089;&#1090;&#1077; &#1074;&#1089;&#1087;&#1083;&#1099;&#1074;&#1072;&#1102;&#1097;&#1077;&#1081; &#1087;&#1086;&#1076;&#1089;&#1082;&#1072;&#1079;&#1082;&#1080; &#1074;&#1099;&#1074;&#1086;&#1076;&#1080;&#1084; &#1090;&#1077;&#1082;&#1091;&#1097;&#1091;&#1102; &#1076;&#1072;&#1090;&#1091;</p>
+</font>
+<p><font size="2">sbTime.ToolTipText = Convert.ToString(System.DateTime.Today.ToLongDateString());</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p><font size="2" COLOR="#0000ff">protected</font><font size="2"> <font COLOR="#0000ff">override</font>
+<font COLOR="#0000ff">void</font> Dispose( <font COLOR="#0000ff">bool</font> 
+disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2">( disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">if</font></font><font size="2">(components != <font COLOR="#0000ff">null</font>)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">components.Dispose();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff"><font size="2">base</font></font><font size="2">.Dispose( disposing );</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">#region</font></font><font size="2"> Windows Form Designer generated code</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required method for 
+Designer support - do not modify</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> the contents of this 
+method with the code editor.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+InitializeComponent()</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.RichTextBox();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.contextMenu1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ContextMenu();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCut = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCopy = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuPaste = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuDelete = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem6 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuSelectAll = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.StatusBar();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbAmount = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.StatusBarPanel();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbTime = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.StatusBarPanel();</font></p>
+<p><font size="2">((System.ComponentModel.ISupportInitialize)(<font COLOR="#0000ff">this</font>.sbAmount)).BeginInit();</font></p>
+<p><font size="2">((System.ComponentModel.ISupportInitialize)(<font COLOR="#0000ff">this</font>.sbTime)).BeginInit();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.SuspendLayout();</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// richTextBox1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.AllowDrop =
+<font COLOR="#0000ff">true</font>;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.ContextMenu =
+<font COLOR="#0000ff">this</font>.contextMenu1;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.Dock = 
+System.Windows.Forms.DockStyle.Fill;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.Location =
+<font COLOR="#0000ff">new</font> System.Drawing.Point(0, 0);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.Name = &quot;richTextBox1&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.Size = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(292, 244);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.TabIndex = 0;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.Text = &quot;&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.richTextBox1.TextChanged +=
+<font COLOR="#0000ff">new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.richTextBox1_TextChanged);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// contextMenu1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.contextMenu1.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCut,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCopy,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuPaste,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuDelete,</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem6,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuSelectAll});</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cmnuCut</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCut.Index = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCut.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlX;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCut.Text = &quot;Cu&amp;t&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCut.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.cmnuCut_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cmnuCopy</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCopy.Index = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCopy.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlC;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCopy.Text = &quot;&amp;Copy&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuCopy.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.cmnuCopy_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cmnuPaste</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuPaste.Index = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuPaste.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlV;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuPaste.Text = &quot;&amp;Paste&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuPaste.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.cmnuPaste_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cmnuDelete</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuDelete.Index = 3;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuDelete.Shortcut = 
+System.Windows.Forms.Shortcut.Del;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuDelete.Text = &quot;&amp;Delete&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuDelete.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.cmnuDelete_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// menuItem6</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem6.Index = 4;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem6.Text = &quot;-&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cmnuSelectAll</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuSelectAll.Index = 5;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuSelectAll.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlA;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuSelectAll.Text = &quot;Select &amp;All&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cmnuSelectAll.Click +=
+<font COLOR="#0000ff">new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.cmnuSelectAll_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// statusBar1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1.Location = <font COLOR="#0000ff">
+new</font> System.Drawing.Point(0, 244);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1.Name = &quot;statusBar1&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1.Panels.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.StatusBarPanel[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbAmount,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbTime});</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1.ShowPanels =
+<font COLOR="#0000ff">true</font>;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1.Size = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(292, 22);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.statusBar1.TabIndex = 1;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// sbAmount</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbAmount.Text = &quot;Amount of symbols&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbAmount.Width = 140;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// sbTime</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbTime.Alignment = 
+System.Windows.Forms.HorizontalAlignment.Center;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbTime.Text = &quot;Time&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.sbTime.Width = 80;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// blank</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.AutoScaleBaseSize = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(5, 13);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.ClientSize = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(292, 266);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.richTextBox1);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.statusBar1);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Name = &quot;blank&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Text = &quot;blank&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.WindowState = 
+System.Windows.Forms.FormWindowState.Maximized;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Closing += <font COLOR="#0000ff">new</font> 
+System.ComponentModel.CancelEventHandler(<font COLOR="#0000ff">this</font>.blank_Closing);</font></p>
+<p><font size="2">((System.ComponentModel.ISupportInitialize)(<font COLOR="#0000ff">this</font>.sbAmount)).EndInit();</font></p>
+<p><font size="2">((System.ComponentModel.ISupportInitialize)(<font COLOR="#0000ff">this</font>.sbTime)).EndInit();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.ResumeLayout(<font COLOR="#0000ff">false</font>);</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff" size="2">
+<p>#endregion</p>
+</font>
+<p><font COLOR="#008000" size="2">// &#1042;&#1099;&#1088;&#1077;&#1079;&#1072;&#1085;&#1080;&#1077; &#1090;&#1077;&#1082;&#1089;&#1090;&#1072;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> Cut()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.BufferText = richTextBox1.SelectedText;</font></p>
+<p><font size="2">richTextBox1.SelectedText = &quot;&quot;;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">// &#1050;&#1086;&#1087;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1090;&#1077;&#1082;&#1089;&#1090;&#1072;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> Copy()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.BufferText = richTextBox1.SelectedText;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">// &#1042;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> Paste()</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">richTextBox1.SelectedText = <font COLOR="#0000ff">this</font>.BufferText;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">// &#1042;&#1099;&#1076;&#1077;&#1083;&#1077;&#1085;&#1080;&#1077; &#1074;&#1089;&#1077;&#1075;&#1086; &#1090;&#1077;&#1082;&#1089;&#1090;&#1072; - &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1077;&#1084; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; 
+SelectAll &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072; &#1091;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103; RichTextBox </p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> 
+SelectAll()</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">richTextBox1.SelectAll(); </font> </p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">// &#1059;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1077;.</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> 
+Delete()</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">richTextBox1.SelectedText = &quot;&quot;; </font> </p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.BufferText = &quot;&quot;;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1084;&#1077;&#1090;&#1086;&#1076; Open, &#1074; &#1082;&#1072;&#1095;&#1077;&#1089;&#1090;&#1074;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1072; &#1086;&#1073;&#1098;&#1103;&#1074;&#1083;&#1103;&#1077;&#1084; 
+&#1089;&#1090;&#1088;&#1086;&#1082;&#1091; &#1072;&#1076;&#1088;&#1077;&#1089;&#1072; &#1092;&#1072;&#1081;&#1083;&#1072;.</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> Open(<font COLOR="#0000ff">string</font> 
+OpenFileName)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1045;&#1089;&#1083;&#1080; &#1092;&#1072;&#1081;&#1083; &#1085;&#1077; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085;, &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1084;&#1089;&#1103; &#1085;&#1072;&#1079;&#1072;&#1076; (&#1087;&#1086;&#1103;&#1074;&#1080;&#1090;&#1089;&#1103; 
+&#1074;&#1089;&#1090;&#1088;&#1086;&#1077;&#1085;&#1085;&#1086;&#1077; &#1087;&#1088;&#1077;&#1076;&#1091;&#1087;&#1088;&#1077;&#1078;&#1076;&#1077;&#1085;&#1080;&#1077;)</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (OpenFileName == &quot;&quot;)
+</font> </p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2">;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff" size="2">else</p>
+</font>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1085;&#1086;&#1074;&#1099;&#1081; &#1086;&#1073;&#1098;&#1077;&#1082;&#1090; StreamReader &#1080; &#1087;&#1077;&#1088;&#1077;&#1076;&#1072;&#1077;&#1084; &#1077;&#1084;&#1091; 
+&#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1091;&#1102; OpenFileName</p>
+</font>
+<p><font size="2">StreamReader sr = <font COLOR="#0000ff">new</font> StreamReader(OpenFileName);</font></p>
+<p><font COLOR="#008000" size="2">//&#1063;&#1080;&#1090;&#1072;&#1077;&#1084; &#1074;&#1077;&#1089;&#1100; &#1092;&#1072;&#1081;&#1083; &#1080; &#1079;&#1072;&#1087;&#1080;&#1089;&#1099;&#1074;&#1072;&#1077;&#1084; &#1077;&#1075;&#1086; &#1074; richTextBox1</p>
+</font>
+<p><font size="2">richTextBox1.Text = sr.ReadToEnd();</font></p>
+<p><font COLOR="#008000" size="2">// &#1047;&#1072;&#1082;&#1088;&#1099;&#1074;&#1072;&#1077;&#1084; &#1087;&#1086;&#1090;&#1086;&#1082;</p>
+</font>
+<p><font size="2">sr.Close();</font></p>
+<p><font COLOR="#008000" size="2">//&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1086;&#1081; DocName &#1087;&#1088;&#1080;&#1089;&#1074;&#1072;&#1080;&#1074;&#1072;&#1077;&#1084; &#1072;&#1076;&#1088;&#1077;&#1089;&#1085;&#1091;&#1102; &#1089;&#1090;&#1088;&#1086;&#1082;&#1091;.</p>
+</font>
+<p><font size="2">DocName = OpenFileName;</font></p>
+<p><font size="2">} </font> </p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+cmnuCut_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">Cut();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+cmnuCopy_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">Copy();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+cmnuPaste_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">Paste();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+cmnuDelete_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">Delete();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+cmnuSelectAll_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs 
+e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">SelectAll();</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1084;&#1077;&#1090;&#1086;&#1076; Save, &#1074; &#1082;&#1072;&#1095;&#1077;&#1089;&#1090;&#1074;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1072; &#1086;&#1073;&#1098;&#1103;&#1074;&#1083;&#1103;&#1077;&#1084; 
+&#1089;&#1090;&#1088;&#1086;&#1082;&#1091; &#1072;&#1076;&#1088;&#1077;&#1089;&#1072; &#1092;&#1072;&#1081;&#1083;&#1072;.</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">void</font> Save(<font COLOR="#0000ff">string</font> 
+SaveFileName)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1045;&#1089;&#1083;&#1080; &#1092;&#1072;&#1081;&#1083; &#1085;&#1077; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085;, &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1084;&#1089;&#1103; &#1085;&#1072;&#1079;&#1072;&#1076; (&#1087;&#1086;&#1103;&#1074;&#1080;&#1090;&#1089;&#1103; 
+&#1074;&#1089;&#1090;&#1088;&#1086;&#1077;&#1085;&#1085;&#1086;&#1077; &#1087;&#1088;&#1077;&#1076;&#1091;&#1087;&#1088;&#1077;&#1078;&#1076;&#1077;&#1085;&#1080;&#1077;)</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (SaveFileName == &quot;&quot;)
+</font> </p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2">;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff" size="2">else</p>
+</font>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1085;&#1086;&#1074;&#1099;&#1081; &#1086;&#1073;&#1098;&#1077;&#1082;&#1090; StreamWriter &#1080; &#1087;&#1077;&#1088;&#1077;&#1076;&#1072;&#1077;&#1084; &#1077;&#1084;&#1091; 
+&#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1091;&#1102; OpenFileName</p>
+</font>
+<p><font size="2">StreamWriter sw = <font COLOR="#0000ff">new</font> StreamWriter(SaveFileName);</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1076;&#1077;&#1088;&#1078;&#1080;&#1084;&#1086;&#1077; richTextBox1 &#1079;&#1072;&#1087;&#1080;&#1089;&#1099;&#1074;&#1072;&#1077;&#1084; &#1074; &#1092;&#1072;&#1081;&#1083;</p>
+</font>
+<p><font size="2">sw.WriteLine(richTextBox1.Text);</font></p>
+<p><font COLOR="#008000" size="2">//&#1047;&#1072;&#1082;&#1088;&#1099;&#1074;&#1072;&#1077;&#1084; &#1087;&#1086;&#1090;&#1086;&#1082;</p>
+</font>
+<p><font size="2">sw.Close();</font></p>
+<p><font COLOR="#008000" size="2">//&#1059;&#1089;&#1090;&#1072;&#1085;&#1072;&#1074;&#1083;&#1080;&#1074;&#1072;&#1077;&#1084; &#1074; &#1082;&#1072;&#1095;&#1077;&#1089;&#1090;&#1074;&#1077; &#1080;&#1084;&#1077;&#1085;&#1080; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1072; &#1085;&#1072;&#1079;&#1074;&#1072;&#1085;&#1080;&#1077; 
+&#1089;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085;&#1085;&#1086;&#1075;&#1086; &#1092;&#1072;&#1081;&#1083;&#1072;</p>
+</font>
+<p><font size="2">DocName = SaveFileName;</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+blank_Closing(<font COLOR="#0000ff">object</font> sender, 
+System.ComponentModel.CancelEventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1045;&#1089;&#1083;&#1080; &#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1072;&#1103; IsSaved &#1080;&#1084;&#1077;&#1077;&#1090; &#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1077; true, &#1090;. &#1077; 
+&#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090; &#1085;&#1086;&#1074;&#1099;&#1081; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090; </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1073;&#1099;&#1083; &#1089;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085; (Save As) &#1080;&#1083;&#1080; &#1074; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1086;&#1084; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1077; &#1073;&#1099;&#1083;&#1080; 
+&#1089;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085;&#1099; &#1080;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1103; (Save) &#1090;&#1086; &#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1103;&#1077;&#1090;&#1089;&#1103; &#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1077;</p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">if</font></font><font size="2">(IsSaved ==<font COLOR="#0000ff">true</font>)</font></p>
+<p><font COLOR="#008000" size="2">//&#1055;&#1086;&#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1076;&#1080;&#1072;&#1083;&#1086;&#1075;&#1086;&#1074;&#1086;&#1077; &#1086;&#1082;&#1085;&#1086;, &#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1102;&#1097;&#1077;&#1077; &#1089;&#1086;&#1093;&#1088;&#1072;&#1085;&#1080;&#1090;&#1100; 
+&#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;.</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (MessageBox.Show(&quot;Do you want save changes in 
+&quot; + <font COLOR="#0000ff">this</font>.DocName + &quot;?&quot;, </font> </p>
+<p><font size="2">&quot;Message&quot;, MessageBoxButtons.YesNo, </font> </p>
+<p><font size="2">MessageBoxIcon.Question) == DialogResult.Yes)</font></p>
+<p><font COLOR="#008000" size="2">//&#1045;&#1089;&#1083;&#1080; &#1073;&#1099;&#1083;&#1072; &#1085;&#1072;&#1078;&#1072;&#1090;&#1072; &#1082;&#1085;&#1086;&#1087;&#1082;&#1072; Yes, &#1074;&#1099;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1084;&#1077;&#1090;&#1086;&#1076; Save</p>
+</font>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Save(<font COLOR="#0000ff">this</font>.DocName);
+</font>
+</p>
+<p><font size="2">} </font> </p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+richTextBox1_TextChanged(<font COLOR="#0000ff">object</font> sender, 
+System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1091; Text &#1087;&#1072;&#1085;&#1077;&#1083;&#1080; sbAmount &#1091;&#1089;&#1090;&#1072;&#1085;&#1072;&#1074;&#1083;&#1080;&#1074;&#1072;&#1077;&#1084; &#1085;&#1072;&#1076;&#1087;&#1080;&#1089;&#1100; &quot;&#1040;mount 
+of symbols &quot; </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1080; &#1076;&#1083;&#1080;&#1085;&#1091; &#1090;&#1077;&#1082;&#1089;&#1090;&#1072; &#1074; RichTextBox.</p>
+</font>
+<p><font size="2">sbAmount.Text = &quot;&#1040;mount of symbols &quot; + richTextBox1.Text.Length.ToString();
+</font>
+</p>
+<p><font size="2">} </font> </p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

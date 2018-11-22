@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ìåòîä Open ôîðìû blank</title>
+</head>
+
+<body bgcolor="#66CCFF">
+
+<p><span lang="ru"><font size="2">&#1052;&#1077;&#1090;&#1086;&#1076; </font> </span>
+<font size="2">Open <span lang="ru">&#1092;&#1086;&#1088;&#1084;&#1099; </span>
+<a href="blank.htm">blank</a>:</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">public</font></font><font size="2"> <font COLOR="#0000ff">void</font> Open(<font COLOR="#0000ff">string</font> 
+OpenFileName)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1045;&#1089;&#1083;&#1080; &#1092;&#1072;&#1081;&#1083; &#1085;&#1077; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085;, &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1084;&#1089;&#1103; &#1085;&#1072;&#1079;&#1072;&#1076; (&#1087;&#1086;&#1103;&#1074;&#1080;&#1090;&#1089;&#1103; 
+&#1074;&#1089;&#1090;&#1088;&#1086;&#1077;&#1085;&#1085;&#1086;&#1077; &#1087;&#1088;&#1077;&#1076;&#1091;&#1087;&#1088;&#1077;&#1078;&#1076;&#1077;&#1085;&#1080;&#1077;)</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (OpenFileName == &quot;&quot;)
+</font> </p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2">;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff" size="2">else</p>
+</font>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1085;&#1086;&#1074;&#1099;&#1081; &#1086;&#1073;&#1098;&#1077;&#1082;&#1090; StreamReader &#1080; &#1087;&#1077;&#1088;&#1077;&#1076;&#1072;&#1077;&#1084; &#1077;&#1084;&#1091; 
+&#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1091;&#1102; OpenFileName</p>
+</font>
+<p><font size="2">StreamReader sr = <font COLOR="#0000ff">new</font> StreamReader(OpenFileName);</font></p>
+<p><font COLOR="#008000" size="2">//&#1063;&#1080;&#1090;&#1072;&#1077;&#1084; &#1074;&#1077;&#1089;&#1100; &#1092;&#1072;&#1081;&#1083; &#1080; &#1079;&#1072;&#1087;&#1080;&#1089;&#1099;&#1074;&#1072;&#1077;&#1084; &#1077;&#1075;&#1086; &#1074; richTextBox1</p>
+</font>
+<p><font size="2">richTextBox1.Text = sr.ReadToEnd();</font></p>
+<p><font COLOR="#008000" size="2">// &#1047;&#1072;&#1082;&#1088;&#1099;&#1074;&#1072;&#1077;&#1084; &#1087;&#1086;&#1090;&#1086;&#1082;</p>
+</font>
+<p><font size="2">sr.Close();</font></p>
+<p><font COLOR="#008000" size="2">//&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1086;&#1081; DocName &#1087;&#1088;&#1080;&#1089;&#1074;&#1072;&#1080;&#1074;&#1072;&#1077;&#1084; &#1072;&#1076;&#1088;&#1077;&#1089;&#1085;&#1091;&#1102; &#1089;&#1090;&#1088;&#1086;&#1082;&#1091;.</p>
+</font>
+<p><font size="2">DocName = OpenFileName;</font></p>
+<p><font size="2">} </font> </p>
+<p><font size="2">}</font></p>
+
+</body>
+
+</html>

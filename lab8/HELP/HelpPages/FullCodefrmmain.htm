@@ -1,0 +1,1035 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Полный листинг формы frmmain</title>
+</head>
+
+<body bgcolor="#66CCFF">
+
+<p><font size="2">Полный листинг формы </font> <span lang="en-us">
+<font size="2">frmmain:</font></span></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Drawing;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Collections;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.ComponentModel;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Windows.Forms;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Data;</font></p>
+<p>&nbsp;</p>
+<font COLOR="#0000ff">
+<p><font size="2">namespace</font></font><font size="2"> NotepadCSharp</font></p>
+<p><font size="2">{</font></p>
+<p></p>
+<p><font COLOR="#0000ff"><font size="2">public</font></font><font size="2"> <font COLOR="#0000ff">class</font> 
+frmmain : System.Windows.Forms.Form</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MainMenu mainMenu1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem menuItem5;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem 
+menuItem12;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuFile;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuNew;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuOpen;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuSave;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuExit;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuEdit;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.OpenFileDialog 
+openFileDialog1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuCut;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuCopy;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuPaste;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuDelete;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem 
+mnuSelectAll;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuHelp;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuAbout;</font></p>
+<p></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem 
+mnuArrangeIcons;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuCascade;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem 
+mnuTileHorizontal;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem 
+mnuTileVertical;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuWindow;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> <font COLOR="#0000ff">int</font> 
+openDocuments = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuFormat;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.SaveFileDialog 
+saveFileDialog1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuSaveAs;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.FontDialog 
+fontDialog1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuFont;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuColor;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ColorDialog 
+colorDialog1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem menuItem1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem mnuFind;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBarButton tbNew;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBarButton 
+tbOpen;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBarButton 
+tbSave;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBarButton tbCut;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBarButton 
+tbCopy;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBarButton 
+tbPaste;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ImageList 
+imageList1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.ToolBar toolBarMain;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem 
+mnunotepadhelp;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.Windows.Forms.MenuItem menuItem2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> System.ComponentModel.IContainer 
+components;</font></p>
+<p></p>
+<p><font COLOR="#0000ff"><font size="2">public</font></font><font size="2"> frmmain()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font COLOR="#008000" size="2">// Required for Windows Form Designer support</p>
+</font>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font size="2">InitializeComponent();</font></p>
+<p><font size="2">mnuSave.Enabled = <font COLOR="#0000ff">false</font>;</font></p>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font COLOR="#008000" size="2">// TODO: Add any constructor code after 
+InitializeComponent call</p>
+</font>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Clean up any resources 
+being used.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">protected</font></font><font size="2"> <font COLOR="#0000ff">override</font>
+<font COLOR="#0000ff">void</font> Dispose( <font COLOR="#0000ff">bool</font> 
+disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">if</font></font><font size="2">( disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">if</font></font><font size="2"> (components != <font COLOR="#0000ff">null</font>)
+</font>
+</p>
+<p><font size="2">{</font></p>
+<p><font size="2">components.Dispose();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff"><font size="2">base</font></font><font size="2">.Dispose( disposing );</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">#region</font></font><font size="2"> Windows Form Designer generated code</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required method for 
+Designer support - do not modify</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> the contents of this 
+method with the code editor.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">private</font></font><font size="2"> <font COLOR="#0000ff">void</font> 
+InitializeComponent()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.components = <font COLOR="#0000ff">new</font> 
+System.ComponentModel.Container();</font></p>
+<p><font size="2">System.Resources.ResourceManager resources = <font COLOR="#0000ff">new</font> 
+System.Resources.ResourceManager(<font COLOR="#0000ff">typeof</font>(frmmain));</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.mainMenu1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MainMenu();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFile = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuNew = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuOpen = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSave = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSaveAs = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem5 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuExit = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuEdit = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCut = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCopy = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuPaste = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuDelete = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem12 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSelectAll = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFind = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFormat = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFont = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuColor = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuWindow = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuArrangeIcons = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCascade = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileHorizontal = <font COLOR="#0000ff">
+new</font> System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileVertical = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuHelp = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuAbout = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.openFileDialog1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.OpenFileDialog();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.saveFileDialog1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.SaveFileDialog();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.fontDialog1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.FontDialog();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.colorDialog1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ColorDialog();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBar();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbNew = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbOpen = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbSave = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbCut = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbCopy = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbPaste = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.imageList1 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ImageList(<font COLOR="#0000ff">this</font>.components);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnunotepadhelp = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem2 = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.SuspendLayout();</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mainMenu1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.mainMenu1.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFile,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuEdit,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFormat,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuWindow,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuHelp});</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuFile</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFile.Index = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFile.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuNew,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuOpen,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSave,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSaveAs,</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem5,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuExit});</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFile.Text = &quot;&amp;File&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuNew</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuNew.Index = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuNew.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlN;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuNew.Text = &quot;&amp;New&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuNew.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuNew_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuOpen</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuOpen.Index = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuOpen.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlO;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuOpen.Text = &quot;&amp;Open&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuOpen.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuOpen_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuSave</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSave.Index = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSave.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlS;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSave.Text = &quot;&amp;Save&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSave.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuSave_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuSaveAs</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSaveAs.Index = 3;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSaveAs.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlShiftS;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSaveAs.Text = &quot;Save &amp;As&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSaveAs.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.mnuSaveAs_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// menuItem5</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem5.Index = 4;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem5.Text = &quot;-&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuExit</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuExit.Index = 5;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuExit.Shortcut = 
+System.Windows.Forms.Shortcut.AltF4;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuExit.Text = &quot;&amp;Exit&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuExit.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuExit_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuEdit</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuEdit.Index = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuEdit.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCut,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCopy,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuPaste,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuDelete,</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem12,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSelectAll,</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem1,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFind});</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuEdit.Text = &quot;&amp;Edit&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuCut</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCut.Index = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCut.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlX;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCut.Text = &quot;Cu&amp;t&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCut.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuCut_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuCopy</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCopy.Index = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCopy.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlC;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCopy.Text = &quot;&amp;Copy&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCopy.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuCopy_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuPaste</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuPaste.Index = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuPaste.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlV;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuPaste.Text = &quot;&amp;Paste&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuPaste.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuPaste_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuDelete</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuDelete.Index = 3;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuDelete.Shortcut = 
+System.Windows.Forms.Shortcut.Del;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuDelete.Text = &quot;&amp;Delete&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuDelete.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.mnuDelete_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// menuItem12</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem12.Index = 4;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem12.Text = &quot;-&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuSelectAll</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSelectAll.Index = 5;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSelectAll.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlA;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSelectAll.Text = &quot;&amp;Select All&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuSelectAll.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.mnuSelectAll_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// menuItem1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem1.Index = 6;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem1.Text = &quot;-&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuFind</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFind.Index = 7;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFind.Shortcut = 
+System.Windows.Forms.Shortcut.CtrlF;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFind.Text = &quot;&amp;Find&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFind.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuFind_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuFormat</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFormat.Index = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFormat.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFont,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuColor});</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFormat.Text = &quot;F&amp;ormat&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuFont</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFont.Index = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFont.Text = &quot;Font...&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuFont.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuFont_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuColor</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuColor.Index = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuColor.Text = &quot;Color...&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuColor.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuColor_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuWindow</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuWindow.Index = 3;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuWindow.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuArrangeIcons,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCascade,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileHorizontal,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileVertical});</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuWindow.Text = &quot;&amp;Window&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuArrangeIcons</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuArrangeIcons.Index = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuArrangeIcons.MdiList =
+<font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuArrangeIcons.Text = &quot;Arrange Icons&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuCascade</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCascade.Index = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCascade.Text = &quot;Cascade&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuCascade.Click += <font COLOR="#0000ff">
+new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.mnuCascade_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuTileHorizontal</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileHorizontal.Index = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileHorizontal.Text = &quot;Tile Horizontal&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileHorizontal.Click +=
+<font COLOR="#0000ff">new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.mnuTileHorizontal_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuTileVertical</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileVertical.Index = 3;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileVertical.Text = &quot;Tile Vertical&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuTileVertical.Click +=
+<font COLOR="#0000ff">new</font> System.EventHandler(<font COLOR="#0000ff">this</font>.mnuTileVertical_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuHelp</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuHelp.Index = 4;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuHelp.MenuItems.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.MenuItem[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnunotepadhelp,</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem2,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuAbout});</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuHelp.Text = &quot;?&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnuAbout</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuAbout.Index = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuAbout.Text = &quot;About Programm...&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.mnuAbout.Click += <font COLOR="#0000ff">new</font> 
+System.EventHandler(<font COLOR="#0000ff">this</font>.mnuAbout_Click);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// openFileDialog1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.openFileDialog1.FileName = &quot;Текстовые 
+файлы&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.openFileDialog1.Filter = &quot;Text Files (*.txt)|*.txt|All 
+Files(*.*)|*.*&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// saveFileDialog1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.saveFileDialog1.FileName = &quot;Текстовые 
+файлы&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.saveFileDialog1.Filter = &quot;Text Files (*.txt)|*.txt|All 
+Files(*.*)|*.*&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// toolBarMain</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.Buttons.AddRange(<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButton[] {</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbNew,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbOpen,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbSave,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbCut,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbCopy,</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbPaste});</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.DropDownArrows =
+<font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.ImageList =
+<font COLOR="#0000ff">this</font>.imageList1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.Location =
+<font COLOR="#0000ff">new</font> System.Drawing.Point(0, 0);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.Name = &quot;toolBarMain&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.ShowToolTips =
+<font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.Size = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(292, 28);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.TabIndex = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.toolBarMain.ButtonClick +=
+<font COLOR="#0000ff">new</font> 
+System.Windows.Forms.ToolBarButtonClickEventHandler(<font COLOR="#0000ff">this</font>.toolBarMain_ButtonClick);</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// tbNew</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbNew.ImageIndex = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbNew.ToolTipText = &quot;Create New&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// tbOpen</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbOpen.ImageIndex = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.tbOpen.ToolTipText = &quot;Open&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// tbSave</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbSave.ImageIndex = 2;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbSave.ToolTipText = &quot;Save&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// tbCut</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbCut.ImageIndex = 3;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbCut.ToolTipText = &quot;Cut&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// tbCopy</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbCopy.ImageIndex = 4;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbCopy.ToolTipText = &quot;Copy&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// tbPaste</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbPaste.ImageIndex = 5;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.tbPaste.ToolTipText = &quot;Paste&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// imageList1</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.imageList1.ImageSize =
+<font COLOR="#0000ff">new</font> System.Drawing.Size(16, 16);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject(&quot;imageList1.ImageStream&quot;)));</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.imageList1.TransparentColor = 
+System.Drawing.Color.Transparent;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// mnunotepadhelp</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.mnunotepadhelp.Index = 0;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.mnunotepadhelp.Shortcut = 
+System.Windows.Forms.Shortcut.F1;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.mnunotepadhelp.Text = &quot;Notepad C# Help&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// menuItem2</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem2.Index = 1;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.menuItem2.Text = &quot;-&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// frmmain</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.AutoScaleBaseSize = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(5, 13);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.ClientSize = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(292, 245);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.toolBarMain);</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Icon = ((System.Drawing.Icon)(resources.GetObject(&quot;$this.Icon&quot;)));</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.IsMdiContainer = <font COLOR="#0000ff">true</font>;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Menu = <font COLOR="#0000ff">this</font>.mainMenu1;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Name = &quot;frmmain&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Text = &quot;Notepad C#&quot;;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.WindowState = 
+System.Windows.Forms.FormWindowState.Maximized;</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.ResumeLayout(<font COLOR="#0000ff">false</font>);</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff" size="2">
+<p>#endregion</p>
+</font>
+<p><font size="2">[STAThread]</font></p>
+<p><font size="2" COLOR="#0000ff">static</font><font size="2"> <font COLOR="#0000ff">void</font> Main()
+</font>
+</p>
+<p><font size="2">{</font></p>
+<p><font size="2">Application.Run(<font COLOR="#0000ff">new</font> frmmain());</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuNew_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Создаем новый экземпляр формы frm</p>
+</font>
+<p><font size="2">blank frm = <font COLOR="#0000ff">new</font> blank();</font></p>
+<p><font size="2">frm.DocName = &quot;Untitled &quot; + ++openDocuments;</font></p>
+<p><font COLOR="#008000" size="2">//Указываем, что родительским контейнером </p>
+</font>
+<p><font COLOR="#008000" size="2">//нового экземпляра будет эта, главная форма.</p>
+</font>
+<p><font size="2">frm.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font size="2">frm.Text = frm.DocName;</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем форму</p>
+</font>
+<p><font size="2">frm.Show();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuArrangeIcons_Click(<font COLOR="#0000ff">object</font> sender, 
+System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.LayoutMdi(MdiLayout.ArrangeIcons);</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuCascade_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.LayoutMdi(MdiLayout.Cascade);</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuTileHorizontal_Click(<font COLOR="#0000ff">object</font> sender, 
+System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.LayoutMdi(MdiLayout.TileHorizontal);</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuTileVertical_Click(<font COLOR="#0000ff">object</font> sender, 
+System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.LayoutMdi(MdiLayout.TileVertical);</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuCut_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font size="2">frm.Cut();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuCopy_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font size="2">frm.Copy();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuPaste_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font size="2">frm.Paste();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuDelete_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font size="2">frm.Delete();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuSelectAll_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs 
+e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font size="2">frm.SelectAll();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuOpen_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Можно программно задавать доступные для обзора 
+расширения файлов. </p>
+</font>
+<p><font COLOR="#008000" size="2">//openFileDialog1.Filter = &quot;Text Files (*.txt)|*.txt|All 
+Files(*.*)|*.*&quot;;</p>
+</font>
+<p></p>
+<p></p>
+<p><font COLOR="#008000" size="2">//Если выбран диалог открытия файла, выполняем условие</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (openFileDialog1.ShowDialog() == 
+DialogResult.OK) </font> </p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Создаем новый документ</p>
+</font>
+<p><font size="2">blank frm = <font COLOR="#0000ff">new</font> blank();</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем метод Open формы blank</p>
+</font>
+<p><font size="2">frm.Open(openFileDialog1.FileName);</font></p>
+<p><font COLOR="#008000" size="2">//Указываем, что родительской формой является форма 
+frmmain</p>
+</font>
+<p><font size="2">frm.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font COLOR="#008000" size="2">//Присваиваем переменной DocName имя открываемого файла</p>
+</font>
+<p><font size="2">frm.DocName = openFileDialog1.FileName;</font></p>
+<p><font COLOR="#008000" size="2">//Свойству Text формы присваиваем переменную DocName</p>
+</font>
+<p><font size="2">frm.Text = frm.DocName;</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем форму frm</p>
+</font>
+<p><font size="2">frm.Show(); </font> </p>
+<p><font size="2">mnuSave.Enabled = <font COLOR="#0000ff">true</font>;</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuSave_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Переключаем фокус на данную форму.</p>
+</font>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем метод Save формы blank</p>
+</font>
+<p><font size="2">frm.Save(frm.DocName);</font></p>
+<p><font size="2">frm.IsSaved = <font COLOR="#0000ff">true</font>;</font></p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuSaveAs_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuSave.Enabled = <font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#008000" size="2">//Можно программно задавать доступные для обзора 
+расширения файлов. </p>
+</font>
+<p><font COLOR="#008000" size="2">//openFileDialog1.Filter = &quot;Text Files (*.txt)|*.txt|All 
+Files(*.*)|*.*&quot;;</p>
+</font>
+<p><font COLOR="#008000" size="2">//Если выбран диалог открытия файла, выполняем условие</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (saveFileDialog1.ShowDialog() == 
+DialogResult.OK) </font> </p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Переключаем фокус на данную форму.</p>
+</font>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем метод Save формы blank</p>
+</font>
+<p><font size="2">frm.Save(saveFileDialog1.FileName);</font></p>
+<p><font COLOR="#008000" size="2">//Указываем, что родительской формой является форма 
+frmmain</p>
+</font>
+<p><font size="2">frm.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font COLOR="#008000" size="2">//Присваиваем переменной FileName имя сохраняемого 
+файла</p>
+</font>
+<p><font size="2">frm.DocName = saveFileDialog1.FileName;</font></p>
+<p><font COLOR="#008000" size="2">//Свойству Text формы присваиваем переменную DocName</p>
+</font>
+<p><font size="2">frm.Text = frm.DocName; </font> </p>
+<p><font size="2">frm.IsSaved = <font COLOR="#0000ff">true</font>;</font></p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuExit_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">this</font><font size="2">.Close();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuFont_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Переключаем фокус на данную форму.</p>
+</font>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font COLOR="#008000" size="2">//Указываем, что родительской формой является форма 
+frmmain </p>
+</font>
+<p><font size="2">frm.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем диалог</p>
+</font>
+<p><font size="2">fontDialog1.ShowColor = <font COLOR="#0000ff">true</font>;</font></p>
+<p><font COLOR="#008000" size="2">//Связываем свойства SelectionFont и SelectionColor 
+элемента RichTextBox </p>
+</font>
+<p><font COLOR="#008000" size="2">//с соответствующими свойствами диалога</p>
+</font>
+<p><font size="2">fontDialog1.Font = frm.richTextBox1.SelectionFont;</font></p>
+<p><font size="2">fontDialog1.Color = frm.richTextBox1.SelectionColor; </font> </p>
+<p><font COLOR="#008000" size="2">//Если выбран диалог открытия файла, выполняем условие</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (fontDialog1.ShowDialog() == DialogResult.OK)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">frm.richTextBox1.SelectionFont = fontDialog1.Font;</font></p>
+<p><font size="2">frm.richTextBox1.SelectionColor = fontDialog1.Color; </font> </p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//Показываем форму</p>
+</font>
+<p><font size="2">frm.Show();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuColor_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">blank frm = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font size="2">frm.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font size="2">colorDialog1.Color = frm.richTextBox1.SelectionColor; </font> </p>
+<p></p>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (colorDialog1.ShowDialog() == DialogResult.OK)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">frm.richTextBox1.SelectionColor = colorDialog1.Color; </font> </p>
+<p><font size="2">}</font></p>
+<p><font size="2">frm.Show();</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuFind_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Создаем новый экземпляр формы FindForm</p>
+</font>
+<p><font size="2">FindForm frm = <font COLOR="#0000ff">new</font> FindForm();</font></p>
+<p><font COLOR="#008000" size="2">//Если выбран результат DialogResult.Cancel, закрываем 
+форму (до этого </p>
+</font>
+<p><font COLOR="#008000" size="2">//мы использовали DialogResult.OK</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2">(frm.ShowDialog(<font COLOR="#0000ff">this</font>) 
+== DialogResult.Cancel) <font COLOR="#0000ff">return</font>;</font></p>
+<p><font COLOR="#008000" size="2">////Переключаем фокус на данную форму.</p>
+</font>
+<p><font size="2">blank form = (blank)<font COLOR="#0000ff">this</font>.ActiveMdiChild;</font></p>
+<p><font COLOR="#008000" size="2">////Указываем, что родительской формой является форма 
+frmmain </p>
+</font>
+<p><font size="2">form.MdiParent = <font COLOR="#0000ff">this</font>;</font></p>
+<p><font COLOR="#008000" size="2">//Вводим переменную для поиска в определенной части 
+текста -</p>
+</font>
+<p><font COLOR="#008000" size="2">//поиск слова будет осуществляться от текущей позиции 
+курсора</p>
+</font>
+<p><font size="2" COLOR="#0000ff">int</font><font size="2"> start = form.richTextBox1.SelectionStart;</font></p>
+<p><font COLOR="#008000" size="2">//Вызываем предопределенный метод Find элемента 
+richTextBox1.</p>
+</font>
+<p><font size="2">form.richTextBox1.Find(frm.FindText, start, frm.FindCondition);</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+mnuAbout_Click(<font COLOR="#0000ff">object</font> sender, System.EventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//Создаем новый экземпляр формы About</p>
+</font>
+<p><font size="2">About frm = <font COLOR="#0000ff">new</font> About();</font></p>
+<p><font size="2">frm.Show();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+toolBarMain_ButtonClick(<font COLOR="#0000ff">object</font> sender, 
+System.Windows.Forms.ToolBarButtonClickEventArgs e)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//New</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (e.Button.Equals(tbNew))
+</font> </p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuNew_Click(<font COLOR="#0000ff">this</font>, <font COLOR="#0000ff">new</font> 
+EventArgs());</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//Open</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (e.Button.Equals(tbOpen))</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuOpen_Click(<font COLOR="#0000ff">this</font>, <font COLOR="#0000ff">new</font> 
+EventArgs());</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//Save</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (e.Button.Equals(tbSave))</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuSave_Click(<font COLOR="#0000ff">this</font>, <font COLOR="#0000ff">new</font> 
+EventArgs());</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//Cut</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (e.Button.Equals(tbCut))</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuCut_Click(<font COLOR="#0000ff">this</font>, <font COLOR="#0000ff">new</font> 
+EventArgs());</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//Copy</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (e.Button.Equals(tbCopy))</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuCopy_Click(<font COLOR="#0000ff">this</font>, <font COLOR="#0000ff">new</font> 
+EventArgs());</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//Paste</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (e.Button.Equals(tbPaste))</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">mnuPaste_Click(<font COLOR="#0000ff">this</font>, <font COLOR="#0000ff">new</font> 
+EventArgs());</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p></p>
+<p>&nbsp;</p>
+<p></p>
+<p></p>
+<p></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

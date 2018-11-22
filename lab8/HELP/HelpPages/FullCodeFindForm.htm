@@ -1,0 +1,267 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ïîëíûé ëèñòèíã ôîðìû FindForm</title>
+</head>
+
+<body bgcolor="#66CCFF">
+
+<p><font size="2">&#1055;&#1086;&#1083;&#1085;&#1099;&#1081; &#1083;&#1080;&#1089;&#1090;&#1080;&#1085;&#1075; &#1092;&#1086;&#1088;&#1084;&#1099; FindForm</font><span lang="en-us"><font size="2">:</font></span></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Drawing;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Collections;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.ComponentModel;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">using</font></font><font size="2"> System.Windows.Forms;</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">namespace</font></font><font size="2"> NotepadCSharp</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Summary description 
+for FindForm.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">class</font> 
+FindForm : System.Windows.Forms.Form</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.TextBox txtFind;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.CheckBox 
+cbMatchWhole;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.CheckBox 
+cbMatchCase;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.Button btnCancel;</font></p>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.Windows.Forms.Button btnOK;</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required designer 
+variable.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> System.ComponentModel.Container 
+components = <font COLOR="#0000ff">null</font>;</font></p>
+<p><font COLOR="#008000" size="2">//&#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; FindText, &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1102;&#1097;&#1077;&#1077; &#1074; &#1082;&#1072;&#1095;&#1077;&#1089;&#1090;&#1074;&#1077; 
+&#1087;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1086;&#1081; </p>
+</font>
+<p><font COLOR="#008000" size="2">//&#1087;&#1086;&#1080;&#1089;&#1082;&#1072; &#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1085;&#1099;&#1081; &#1090;&#1077;&#1082;&#1089;&#1090; &#1074; &#1090;&#1077;&#1082;&#1089;&#1090;&#1086;&#1074;&#1086;&#1077; &#1087;&#1086;&#1083;&#1077; &#1092;&#1086;&#1088;&#1084;&#1099; 
+FindForm</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> <font COLOR="#0000ff">string</font> 
+FindText</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">get</font></font><font size="2">{<font COLOR="#0000ff">return</font> 
+txtFind.Text;}</font></p>
+<p><font COLOR="#0000ff"><font size="2">set</font></font><font size="2">{txtFind.Text = <font COLOR="#0000ff">value</font>;}</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">// &#1057;&#1086;&#1079;&#1076;&#1072;&#1077;&#1084; &#1087;&#1077;&#1088;&#1077;&#1095;&#1080;&#1089;&#1083;&#1077;&#1085;&#1080;&#1077;, &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1102;&#1097;&#1077;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088; 
+FindCondition</p>
+</font>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> RichTextBoxFinds FindCondition</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff" size="2">get</p>
+</font>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//&#1042;&#1099;&#1073;&#1088;&#1072;&#1085;&#1099; &#1076;&#1074;&#1072; &#1095;&#1077;&#1082;&#1073;&#1086;&#1082;&#1089;&#1072;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (cbMatchCase.Checked &amp;&amp; cbMatchWhole.Checked)</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">// &#1042;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1084; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; MatchCase &#1080; WholeWord </p>
+</font>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2"> RichTextBoxFinds.MatchCase| 
+RichTextBoxFinds.WholeWord;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1042;&#1099;&#1073;&#1088;&#1072;&#1085; &#1086;&#1076;&#1085;&#1080; &#1095;&#1077;&#1082;&#1073;&#1086;&#1082;&#1089;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (cbMatchCase.Checked )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">// &#1042;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1084; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; MatchCase</p>
+</font>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2"> RichTextBoxFinds.MatchCase;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1042;&#1099;&#1073;&#1088;&#1072;&#1085; &#1076;&#1088;&#1091;&#1075;&#1086;&#1081; &#1095;&#1077;&#1082;&#1073;&#1086;&#1082;&#1089;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2"> (cbMatchWhole.Checked )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">// &#1042;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1084; &#1089;&#1074;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086; WholeWord</p>
+</font>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2"> RichTextBoxFinds.WholeWord;</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#008000" size="2">//&#1053;&#1077; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085; &#1085;&#1080; &#1086;&#1076;&#1085;&#1080; &#1095;&#1077;&#1082;&#1073;&#1086;&#1082;&#1089;</p>
+</font>
+<p><font size="2" COLOR="#0000ff">return</font><font size="2"> RichTextBoxFinds.None;</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#0000ff">public</font><font size="2"> FindForm()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font COLOR="#008000" size="2">// Required for Windows Form Designer support</p>
+</font>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font size="2">InitializeComponent();</font></p>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font COLOR="#008000" size="2">// TODO: Add any constructor code after 
+InitializeComponent call</p>
+</font>
+<p><font COLOR="#008000" size="2">//</p>
+</font>
+<p><font size="2">}</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Clean up any resources 
+being used.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">protected</font><font size="2"> <font COLOR="#0000ff">override</font>
+<font COLOR="#0000ff">void</font> Dispose( <font COLOR="#0000ff">bool</font> 
+disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2" COLOR="#0000ff">if</font><font size="2">( disposing )</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">if</font></font><font size="2">(components != <font COLOR="#0000ff">null</font>)</font></p>
+<p><font size="2">{</font></p>
+<p><font size="2">components.Dispose();</font></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+<p><font COLOR="#0000ff"><font size="2">base</font></font><font size="2">.Dispose( disposing );</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff">
+<p><font size="2">#region</font></font><font size="2"> Windows Form Designer generated code</font></p>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> Required method for 
+Designer support - do not modify</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000"><font size="2"> the contents of this 
+method with the code editor.</font></p>
+</font>
+<p><font size="2" COLOR="#808080">///</font><font COLOR="#008000" size="2"> </font>
+<font COLOR="#808080"><font size="2">&lt;/summary&gt;</font></p>
+</font>
+<p><font size="2" COLOR="#0000ff">private</font><font size="2"> <font COLOR="#0000ff">void</font> 
+InitializeComponent()</font></p>
+<p><font size="2">{</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.txtFind = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.TextBox();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchWhole = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.CheckBox();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchCase = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.CheckBox();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnCancel = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.Button();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnOK = <font COLOR="#0000ff">new</font> 
+System.Windows.Forms.Button();</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.SuspendLayout();</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// txtFind</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.txtFind.Location = <font COLOR="#0000ff">
+new</font> System.Drawing.Point(8, 16);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.txtFind.Name = &quot;txtFind&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.txtFind.Size = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(192, 20);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.txtFind.TabIndex = 0;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.txtFind.Text = &quot;&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cbMatchWhole</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchWhole.Location =
+<font COLOR="#0000ff">new</font> System.Drawing.Point(120, 48);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchWhole.Name = &quot;cbMatchWhole&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchWhole.TabIndex = 3;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchWhole.Text = &quot;Match &amp;whole word&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// cbMatchCase</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchCase.Location =
+<font COLOR="#0000ff">new</font> System.Drawing.Point(8, 48);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchCase.Name = &quot;cbMatchCase&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchCase.TabIndex = 2;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.cbMatchCase.Text = &quot;Match &amp;Case&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// btnCancel</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnCancel.DialogResult = 
+System.Windows.Forms.DialogResult.Cancel;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnCancel.Location = <font COLOR="#0000ff">
+new</font> System.Drawing.Point(232, 48);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnCancel.Name = &quot;btnCancel&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnCancel.TabIndex = 4;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnCancel.Text = &quot;&amp;Cancel&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// btnOK</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnOK.DialogResult = 
+System.Windows.Forms.DialogResult.OK;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnOK.Location = <font COLOR="#0000ff">new</font> 
+System.Drawing.Point(232, 16);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnOK.Name = &quot;btnOK&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnOK.TabIndex = 1;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.btnOK.Text = &quot;&amp;OK&quot;;</font></p>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#008000" size="2">// FindForm</p>
+</font>
+<p><font COLOR="#008000" size="2">// </p>
+</font>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.AutoScaleBaseSize = <font COLOR="#0000ff">
+new</font> System.Drawing.Size(5, 13);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.ClientSize = <font COLOR="#0000ff">new</font> 
+System.Drawing.Size(322, 88);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.btnCancel);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.btnOK);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.cbMatchWhole);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.cbMatchCase);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Controls.Add(<font COLOR="#0000ff">this</font>.txtFind);</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.FormBorderStyle = 
+System.Windows.Forms.FormBorderStyle.FixedToolWindow;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Name = &quot;FindForm&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.Text = &quot;Find&quot;;</font></p>
+<p><font COLOR="#0000ff"><font size="2">this</font></font><font size="2">.ResumeLayout(<font COLOR="#0000ff">false</font>);</font></p>
+<p><font size="2">}</font></p>
+<font COLOR="#0000ff" size="2">
+<p>#endregion</p>
+</font>
+<p></p>
+<p></p>
+<p><font size="2">}</font></p>
+<p><font size="2">}</font></p>
+
+</body>
+
+</html>
